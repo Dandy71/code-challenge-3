@@ -17,10 +17,10 @@ app.use(morgan("common"));
 app.use(cors());
 
 export const connection = mysql.createConnection({
-  host: "34.129.52.54",
-  user: "dandy1234",
-  password: "dandy12345",
-  database: "foxtest",
+  host: process.env.SQLHOSTIP,
+  user: process.env.SQLUSER,
+  password: process.env.SQLPASSWORD,
+  database: process.env.SQLDATABASE,
 });
 
 // routes
